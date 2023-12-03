@@ -49,7 +49,7 @@ def extract_digits_final(s):
     return extracted_digits
 
 
-class Puzzle:
+class Day01:
     def __init__(self, path):
         # Load the puzzle from the file
         self.puzzle = load_puzzle(path)
@@ -78,7 +78,7 @@ class Puzzle:
 
 if __name__ == "__main__":
     # Create a new puzzle instance
-    puzzle = Puzzle("src/Day01/puzzle_test.txt")
+    puzzle = Day01("src/Day01/puzzle_test.txt")
 
     # Solve the puzzle
     puzzle.solve()

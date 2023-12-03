@@ -1,6 +1,6 @@
 import unittest
 import os
-from src.Day01.day01 import Puzzle
+from src.Day01.day01 import Day01
 
 
 class TestPuzzle(unittest.TestCase):
@@ -34,23 +34,23 @@ class TestPuzzle(unittest.TestCase):
 
     def test_init(self):
         # Test the __init__ method
-        puzzle = Puzzle(os.path.join(self.test_data_dir, "test1.txt"))
+        puzzle = Day01(os.path.join(self.test_data_dir, "test1.txt"))
         self.assertIsNotNone(puzzle.puzzle)
         self.assertEqual(len(puzzle.puzzle), 3)
 
     def test_solve_with_data(self):
         # Test the solve method with data
-        puzzle = Puzzle(os.path.join(self.test_data_dir, "test1.txt"))
+        puzzle = Day01(os.path.join(self.test_data_dir, "test1.txt"))
         puzzle.solve()
         self.assertEqual(puzzle.solution, 96)
 
-        puzzle = Puzzle(os.path.join(self.test_data_dir, "test2.txt"))
+        puzzle = Day01(os.path.join(self.test_data_dir, "test2.txt"))
         puzzle.solve()
         self.assertEqual(puzzle.solution, 136)
 
     def test_solve_empty(self):
         # Test the solve method with empty file
-        puzzle = Puzzle(os.path.join(self.test_data_dir, "empty.txt"))
+        puzzle = Day01(os.path.join(self.test_data_dir, "empty.txt"))
         puzzle.solve()
         self.assertEqual(puzzle.solution, 0)
 
