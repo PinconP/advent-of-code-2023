@@ -3,7 +3,7 @@ import os
 from src.Day01.day01 import Day01
 
 
-class TestPuzzle(unittest.TestCase):
+class TestDay01(unittest.TestCase):
     test_data_dir = "test_data"  # Directory where test files will be stored
 
     @classmethod
